@@ -27,6 +27,8 @@ RUN apk --update --no-cache add \
     mariadb-client \
     monitoring-plugins \
     mtr \
+    nagios-plugins \
+    nagios-plugins-all \
     net-snmp \
     net-snmp-tools \
     nginx \
@@ -103,7 +105,8 @@ ENV S6_BEHAVIOUR_IF_STAGE2_FAILS="2" \
   PGID="1000"
 
 RUN addgroup -g ${PGID} librenms \
-  && adduser -D -h /home/librenms -u ${PUID} -G librenms -s /bin/sh -D librenms \
+  && adduser -D -h /opt/librenms -u ${PUID} -G librenms -s /bin/sh -D librenms \
+  && ln -s /opt/librenms /home/librenms \
   && curl -sSLk -q https://raw.githubusercontent.com/librenms/librenms-agent/master/snmp/distro -o /usr/bin/distro \
   && chmod +x /usr/bin/distro
 
