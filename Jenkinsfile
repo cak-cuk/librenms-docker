@@ -9,7 +9,7 @@ pipeline {
     timeout(time: 2, unit: "HOURS")
   }
   environment {
-      GITHUB_API_URL = "https://api.github.com/repos/cakcuk/librenms-docker/"
+      GITHUB_API_URL = "https://api.github.com/repos/cak-cuk/librenms-docker/"
   }
     stages {
       stage("Publish commit status") {
