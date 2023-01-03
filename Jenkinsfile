@@ -9,11 +9,12 @@ pipeline {
     timeout(time: 2, unit: "HOURS")
   }
   environment {
-      GITHUB_API_URL = "https://api.github.com/repos/cakcuk/librenms-docker/"
+      GITHUB_API_URL = "https://api.github.com/repos/cak-cuk/librenms-docker/"
   }
     stages {
       stage("Publish commit status") {
         steps {
+            sh 'printenv | sort'
             withCredentials([string(credentialsId: 'bde8f904-5da4-459b-b8c6-844281315ff7', variable: 'GITHUB_TOKEN')]) {
               sh 'bash scripts/inprogress.sh'
             }
