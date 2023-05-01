@@ -15,7 +15,7 @@ Docker image for [LibreNMS](https://www.librenms.org/), a fully featured network
 monitoring system that provides a wealth of features and device support.
 
 > **Note**
-> 
+>
 > Want to be notified of new releases? Check out 🔔 [Diun (Docker Image Update Notifier)](https://github.com/crazy-max/diun)
 > project!
 
@@ -279,7 +279,7 @@ page_refresh: 300
 webui.default_dashboard_id: 0
 ```
 
-This configuration will be seeded into the LibreNMS database when it is first deployed 
+This configuration will be seeded into the LibreNMS database when it is first deployed
 and will override the default values.
 
 ### Live Configuration
