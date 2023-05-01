@@ -17,6 +17,8 @@ on:
       - 'master'
     paths-ignore:
       - '**.md'
+env:
+  DOCKERHUB_SLUG: librenms/librenms
 
 jobs:
   build:
